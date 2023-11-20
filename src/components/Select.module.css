@@ -1,0 +1,99 @@
+.container {
+  position: relative;
+  width: 20rem;
+  min-height: 1.5rem;
+  border: 0.5px solid #777;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  outline: none;
+}
+.container:focus {
+  border-color: rgb(42, 172, 224);
+}
+.value {
+  flex-grow: 1;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.clear-btn {
+  background-color: transparent;
+  color: #777;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.25rem;
+}
+.clear-btn:hover,
+.clear-btn:focus {
+  color: #333;
+}
+.divider {
+  background-color: #777;
+  align-self: stretch;
+  width: 0.5px;
+}
+.caret {
+  translate: 0 25%;
+  border: 0.25em solid transparent;
+  border-top-color: #777;
+}
+
+.options {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  max-height: 15rem;
+  overflow-y: auto;
+  border: 0.5px solid #777;
+  border-radius: 0.25em;
+  width: 100%;
+  left: 0;
+  top: 105%;
+  background-color: #333;
+  z-index: 10;
+}
+.options.show {
+  display: block;
+}
+
+.option {
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.option:hover {
+  background-color: rgb(3, 184, 255);
+}
+.option.selected {
+  background-color: rgb(0, 126, 176);
+}
+
+.badge {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 8px;
+  outline: none;
+  border: none;
+  transition: 0.5s linear;
+}
+.badge:hover .clear-btn {
+  color: red;
+}
+.badge:focus,
+.badge:hover {
+  outline: none;
+  background-color: #333;
+}
+
+.badge .clear-btn {
+  font-size: 0.9rem;
+}
